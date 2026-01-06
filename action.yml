@@ -1,0 +1,31 @@
+# метаданные
+name: "VISOR - сканер IaC"
+description: "Запуск VISOR. Порог Score."
+author: "coder-kirill"
+
+branding:
+  icon: shield
+  color: blue
+
+inputs:
+  path:
+    description: "Путь для сканирования"
+    required: false
+    default: "."
+  min_score:
+    description: "Минимальный Score (0-100)"
+    required: false
+    default: "80"
+  language:
+    description: "Язык вывода: en|ru"
+    required: false
+    default: "en"
+
+outputs:
+  score:
+    description: "Score (0-100)"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  # входы доступны как INPUT_PATH, INPUT_MIN_SCORE, INPUT_LANGUAGE
