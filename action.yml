@@ -1,4 +1,3 @@
-# метаданные
 name: "VISOR - сканер IaC"
 description: "Запуск VISOR. Порог Score."
 author: "coder-kirill"
@@ -26,6 +25,5 @@ outputs:
     description: "Score (0-100)"
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
-  # входы доступны как INPUT_PATH, INPUT_MIN_SCORE, INPUT_LANGUAGE
+  using: docker
+  image: docker://ghcr.io/coder-kirill/visor-action:v1
